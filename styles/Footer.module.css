@@ -1,0 +1,32 @@
+.container {
+  border-top: solid;
+  border-color: rgb(188, 189, 194);
+  background-color: rgb(240, 241, 245);
+  box-shadow: none;
+  font-size: 10pt;
+  text-align: center;
+  padding: 1rem;
+  font-weight: 200;
+}
+
+.container ul {
+  margin: 2rem auto;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 3em;
+}
+
+.name {
+  font-size: 8pt;
+}
+
+@media (max-width: 767px) {
+  .container ul {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+}
