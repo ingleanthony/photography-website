@@ -14,7 +14,7 @@ export const Navbar: FC = () => {
       <nav>
         <ul>
           <li>
-            <Link href={"/"}>About</Link>
+            <Link href={"/about"}>About</Link>
           </li>
           <li>
             <Link href={"/"}>Portfolio</Link>
@@ -90,6 +90,7 @@ export const Navbar: FC = () => {
           display: block;
           width: 100%;
           max-width: 15rem;
+          cursor: pointer;
         }
 
         @media (max-width: 767px) {

@@ -26,6 +26,7 @@ span {
   width: auto;
   gap: 1em;
   margin: 0 1rem;
+  min-height: 100vh;
 }
 .my-masonry-grid_column {
   /* padding-left: 30px; gutter size */

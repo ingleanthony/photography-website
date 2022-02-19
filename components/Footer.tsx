@@ -10,7 +10,7 @@ export default function Footer() {
       <Image src={logo} alt="logo" height={35} />
       <ul>
         <li>
-          <Link href={"/"}>About</Link>
+          <Link href={"/about"}>About</Link>
         </li>
         <li>
           <Link href={"/"}>Portfolio</Link>

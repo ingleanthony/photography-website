@@ -10,7 +10,7 @@ import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
-  const { loading, error, data } = useFetch(`/api/photos`);
+  const { loading, error, data } = useFetch(`/api/portfolio`);
 
   const urlEndpoint = "https://ik.imagekit.io/anthonyinglephoto/";
   const imageKitLoader = ({ src, width, quality }: any) => {
@@ -90,8 +90,8 @@ const Home: NextPage = () => {
                 className={styles.image}
                 height={photo.height}
                 width={photo.width}
-                placeholder="blur"
-                blurDataURL={photo.thumbnail}
+                // placeholder="blur"
+                // blurDataURL={photo.thumbnail}
                 src={photo.url}
                 objectFit="cover"
                 alt={`photo${index}`}
