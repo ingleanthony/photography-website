@@ -1,3 +1,52 @@
 .main {
-  min-height: 100vh;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  min-height: 70vh;
+}
+
+.portrait {
+  max-width: 40ch;
+  position: relative;
+}
+
+.aboutMe {
+  background-color: rgb(234, 236, 240);
+  max-width: 40ch;
+  height: 60ch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 4rem;
+}
+
+.aboutMe h1 {
+  font-size: 28pt;
+  margin-bottom: 0;
+}
+
+.aboutMe p {
+  font-size: 14pt;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+@media (max-width: 767px) {
+  .aboutMe {
+    padding: 2rem;
+    height: auto;
+  }
+
+  .aboutMe h1 {
+    font-size: 24pt;
+  }
+
+  .aboutMe p {
+    font-size: 12pt;
+  }
 }

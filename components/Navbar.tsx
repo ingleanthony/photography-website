@@ -9,15 +9,15 @@ export const Navbar: FC = () => {
   return (
     <header className="navbar">
       <div className="mobile-logo">
-        <Image className="" src={logo} alt="logo" height={35} />
+        <Image src={logo} alt="logo" height={35} />
       </div>
       <nav>
         <ul>
           <li>
-            <Link href={"/about"}>About</Link>
+            <Link href={"/"}>Portfolio</Link>
           </li>
           <li>
-            <Link href={"/"}>Portfolio</Link>
+            <Link href={"/about"}>About</Link>
           </li>
           <Link href={"/"} passHref>
             <div className="logo">

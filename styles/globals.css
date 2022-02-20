@@ -39,3 +39,10 @@ span {
   background: grey;
   margin-bottom: 1em;
 }
+
+@media (max-width: 767px) {
+  main {
+    padding: 1rem;
+    padding-top: 3rem;
+  }
+}
