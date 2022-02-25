@@ -7,6 +7,8 @@
   flex-wrap: wrap;
   margin-bottom: 2rem;
   min-height: 70vh;
+  padding: 1rem;
+  padding-top: 0rem;
 }
 
 .portrait {
@@ -15,7 +17,7 @@
 }
 
 .aboutMe {
-  background-color: rgb(234, 236, 240);
+  background-color: rgb(240, 241, 245);
   max-width: 40ch;
   height: 60ch;
   display: flex;

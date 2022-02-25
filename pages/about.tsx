@@ -26,7 +26,7 @@ const About: NextPage = () => {
     return `${urlEndpointTemp}/${src}?tr=${paramsString}`;
   };
   return (
-    <div className={styles.container}>
+    <div className="container">
       <Navbar />
       <main className={styles.main}>
         <article className={styles.aboutMe}>
@@ -42,7 +42,7 @@ const About: NextPage = () => {
         </article>
         <div className={styles.portrait}>
           <Image
-            src="https://ik.imagekit.io/anthonyinglephoto/portrait.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1645384640867"
+            src="https://ik.imagekit.io/anthonyinglephoto/anthony?ik-sdk-version=javascript-1.4.3&updatedAt=1645385311819"
             alt="Anthony Ingle"
             height={2700}
             width={1800}

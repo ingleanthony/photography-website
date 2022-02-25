@@ -10,8 +10,8 @@ export default function handler(
     let ImageKit = require("imagekit");
 
     let imagekit = new ImageKit({
-      publicKey: process.env.PUBLIC_KEY,
-      privateKey: process.env.PRIVATE_KEY,
+      publicKey: process.env.IK_PUBLIC_KEY,
+      privateKey: process.env.IK_PRIVATE_KEY,
       urlEndpoint: "https://ik.imagekit.io/anthonyinglephoto/",
     });
 

@@ -9,7 +9,9 @@ export const Navbar: FC = () => {
   return (
     <header className="navbar">
       <div className="mobile-logo">
-        <Image src={logo} alt="logo" height={35} />
+        <Link href="/" passHref>
+          <Image src={logo} alt="logo" height={35} />
+        </Link>
       </div>
       <nav>
         <ul>
@@ -25,10 +27,10 @@ export const Navbar: FC = () => {
             </div>
           </Link>
           <li>
-            <Link href={"/"}>Packages</Link>
+            <Link href={"/packages"}>Packages</Link>
           </li>
           <li>
-            <Link href={"/"}>Contact</Link>
+            <Link href={"/contact"}>Contact</Link>
           </li>
         </ul>
       </nav>
@@ -143,6 +145,7 @@ export const Navbar: FC = () => {
 
           .mobile-logo {
             display: block;
+            cursor: pointer;
           }
 
           .logo {

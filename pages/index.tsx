@@ -10,30 +10,10 @@ import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
-  const { loading, error, data } = useFetch(`/api/portfolio`);
-
-  // const urlEndpoint = "https://ik.imagekit.io/anthonyinglephoto/";
-  // const imageKitLoader = ({ src, width, quality }: any) => {
-  //   if (src[0] === "/") src = src.slice(1);
-  //   const params = [`w-${width}`];
-
-  //   if (quality) {
-  //     params.push(`q-${quality}`);
-  //   }
-  //   const paramsString = params.join(",");
-  //   let urlEndpointTemp = urlEndpoint;
-
-  //   if (urlEndpointTemp[urlEndpointTemp.length - 1] === "/")
-  //     urlEndpointTemp = urlEndpointTemp.substring(
-  //       0,
-  //       urlEndpointTemp.length - 1
-  //     );
-
-  //   return `${urlEndpointTemp}/${src}?tr=${paramsString}`;
-  // };
+  const { loading, error, data } = useFetch({ url: "/api/portfolio" });
 
   return (
-    <div className={styles.container}>
+    <div className="container">
       <Head>
         <title>Anthony Ingle Photography</title>
         <meta name="description" content="Tallahassee Portrait Photography" />

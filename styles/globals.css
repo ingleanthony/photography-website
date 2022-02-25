@@ -41,8 +41,7 @@ span {
 }
 
 @media (max-width: 767px) {
-  main {
-    padding: 1rem;
+  .container {
     padding-top: 3rem;
   }
 }
