@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import Image from "next/image";
-import { useState } from "react";
+import React, { useState } from "react";
 import Footer from "../components/Footer";
 import { Navbar } from "../components/Navbar";
 import styles from "../styles/Contact.module.css";
@@ -19,11 +19,11 @@ const About: NextPage = () => {
     message: "",
   });
 
-  const onChange = (e: any) => {
+  const onChange = (e: React.ChangeEvent<any>) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
-  const sendMessage = (e: Event) => {
+  const sendMessage = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     let headers = new Headers();
     headers.append("Content-Type", "application/json");
@@ -82,7 +82,7 @@ const About: NextPage = () => {
               onChange={onChange}
             />
           </div>
-          <input type="submit" value="Send" />
+          <input className={styles.button} type="submit" value="Send" />
         </form>
       </main>
       <Footer />

@@ -13,8 +13,22 @@
   background-color: rgb(240, 241, 245);
   padding: 1rem;
   max-width: 80ch;
+  gap: 0.5rem;
 }
 
-.contactForm input {
-  width: 80%;
+.contactForm input,
+.contactForm textarea {
+  width: 40ch;
+  padding: 0.5em;
+  border-radius: 6pt;
+  border: none;
+}
+
+.button {
+  background-color: rgb(61, 185, 243);
+  color: white;
+  border: none;
+  border-radius: 12pt;
+  font-size: 12pt;
+  height: 2rem;
 }

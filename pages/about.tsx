@@ -35,9 +35,10 @@ const About: NextPage = () => {
           </div>
           <h1>Hi, I&apos;m Anthony!</h1>
           <p>
-            I am a Computer Science major at Florida State University. However,
-            one of my favorite activities is taking pictures. I love capturing
-            moments for people that they will remember forever.
+            One of my favorite things to hold in my hands is my camera. I love
+            capturing moments for people that they will remember forever. I am
+            also a Computer Science major at Florida State University. In my
+            freetime I will sit down and build some stuff, like this website.
           </p>
         </article>
         <div className={styles.portrait}>
