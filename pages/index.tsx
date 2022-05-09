@@ -59,7 +59,7 @@ const Home: NextPage = () => {
         }}
       > */}
       <Masonry
-        breakpointCols={{ default: 4, 1100: 3, 700: 2, 500: 1 }}
+        breakpointCols={{ default: 4, 1400: 3, 1000: 2, 500: 1 }}
         className="my-masonry-grid"
         columnClassName="my-masonry-grid_column"
       >

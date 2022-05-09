@@ -3,7 +3,6 @@
   width: 100%;
   justify-content: center;
   align-items: flex-start;
-  gap: 2rem;
   flex-wrap: wrap;
   margin-bottom: 2rem;
   min-height: 70vh;
@@ -25,6 +24,7 @@
   justify-content: center;
   flex-direction: column;
   padding: 4rem;
+  border-radius: 12pt 0pt 0pt 12pt;
 }
 
 .aboutMe h1 {
@@ -42,6 +42,7 @@
   .aboutMe {
     padding: 2rem;
     height: auto;
+    border-radius: 12pt 12pt 0pt 0pt;
   }
 
   .aboutMe h1 {

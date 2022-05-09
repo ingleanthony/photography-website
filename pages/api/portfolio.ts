@@ -1,10 +1,31 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-type Data = JSON;
+export type Data = {
+  type: string;
+  name: string;
+  createdAt: string;
+  updatedAt: string;
+  fileId: string;
+  tags: any[];
+  AITags: any[];
+  embeddedMetadata: any[];
+  customCoordinates: any[];
+  customMetadata: JSON;
+  isPrivateFile: boolean;
+  url: string;
+  thumbnail: string;
+  fileType: string;
+  filePath: string;
+  height: number;
+  width: number;
+  size: number;
+  hasAlpha: boolean;
+  mime: string;
+};
 
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>
+  res: NextApiResponse<Data[]>
 ) {
   return new Promise<void>((resolve) => {
     let ImageKit = require("imagekit");
@@ -19,9 +40,10 @@ export default function handler(
       {
         path: "portfolio",
       },
-      function (error: Error, result: JSON) {
+      function (error: Error, result: Data[]) {
         if (error) console.log(error);
-        res.status(200).json(result);
+        console.log(result);
+        res.status(200).json(result.reverse());
         return resolve();
       }
     );

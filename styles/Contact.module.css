@@ -1,7 +1,6 @@
 .main {
   min-height: 80vh;
-  padding: 1rem;
-  padding-top: 0rem;
+  padding: 0rem 0.5rem 1rem 0.5rem;
 }
 
 .contactForm {
@@ -11,24 +10,99 @@
   flex-direction: column;
   margin: auto;
   background-color: rgb(240, 241, 245);
-  padding: 1rem;
   max-width: 80ch;
   gap: 0.5rem;
+  padding: 2rem 1rem 3rem 1rem;
+  border-radius: 12pt;
 }
 
-.contactForm input,
+.contactForm h1 {
+  font-size: 28pt;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.links img {
+  max-height: 2rem;
+}
+
+.linebreak {
+  color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3em;
+  font-size: x-small;
+}
+
+.linebreak::after,
+.linebreak::before {
+  content: "";
+  display: inline-block;
+  width: 2rem;
+  height: 1px;
+  margin: 0 8px;
+  background-color: gray;
+}
+
+.contactForm div {
+  width: 100%;
+  max-width: 40ch;
+}
+
+.contactForm label {
+  font-size: small;
+}
+
+.contactForm input[name="name"],
+.contactForm input[name="email"],
 .contactForm textarea {
-  width: 40ch;
-  padding: 0.5em;
-  border-radius: 6pt;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 4pt;
   border: none;
+  resize: vertical;
+  font-size: 12pt;
+}
+
+.contactForm input[name="name"]:focus,
+.contactForm input[name="email"]:focus,
+.contactForm textarea:focus {
+  outline-color: #4d75a2;
 }
 
 .button {
-  background-color: rgb(61, 185, 243);
+  width: 100%;
+  max-width: 40ch;
+  background-color: #4d75a2;
   color: white;
   border: none;
-  border-radius: 12pt;
+  border-radius: 4pt;
   font-size: 12pt;
-  height: 2rem;
+  height: 2.5rem;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .button {
+    height: 3rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .contactForm h1 {
+    font-size: 24pt;
+  }
+
+  .links {
+    gap: 2rem;
+  }
 }

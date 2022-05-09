@@ -120,7 +120,7 @@ export const Navbar: FC = () => {
             align-items: flex-start;
             justify-content: flex-start;
             font-size: calc(1em + 1vh);
-            transition: 0.5s all;
+            transition: 0.4s all;
             opacity: ${hamburgerOpen ? "1" : "0"};
             transform: translateX(${hamburgerOpen ? "0" : "100%"});
           }

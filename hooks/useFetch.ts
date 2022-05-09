@@ -1,27 +1,5 @@
 import { useEffect, useState } from "react";
-
-type Data = {
-  type: string;
-  name: string;
-  createdAt: string;
-  updatedAt: string;
-  fileId: string;
-  tags: any[];
-  AITags: any[];
-  embeddedMetadata: any[];
-  customCoordinates: any[];
-  customMetadata: JSON;
-  isPrivateFile: boolean;
-  url: string;
-  thumbnail: string;
-  fileType: string;
-  filePath: string;
-  height: number;
-  width: number;
-  size: number;
-  hasAlpha: boolean;
-  mime: string;
-};
+import { Data } from "../pages/api/portfolio";
 
 type RequestProps = {
   url: RequestInfo;

@@ -4,7 +4,12 @@ import React, { useState } from "react";
 import Footer from "../components/Footer";
 import { Navbar } from "../components/Navbar";
 import styles from "../styles/Contact.module.css";
-import camera from "../svg/otherCamera.svg";
+import chatSvg from "../svg/chat.svg";
+import facebookSvg from "../svg/facebook.svg";
+import instagramSvg from "../svg/instagram.svg";
+import phoneSvg from "../svg/phone.svg";
+import emailSvg from "../svg/email.svg";
+import ImageLink from "../components/ImageLink";
 
 export type ContactFormValues = {
   name: string;
@@ -51,14 +56,37 @@ const About: NextPage = () => {
       <Navbar />
       <main className={styles.main}>
         <form className={styles.contactForm} onSubmit={sendMessage}>
-          <Image src={camera} alt="camera" />
+          <Image src={chatSvg} alt="camera" />
           <h1>Contact Me!</h1>
+
+          <section className={styles.links}>
+            <ImageLink
+              src={instagramSvg}
+              alt="instagram"
+              link="https://www.instagram.com/ant.ing/"
+            />
+            <ImageLink
+              src={facebookSvg}
+              alt="facebook"
+              link="https://www.facebook.com/anthonyinglephotography"
+            />
+            <ImageLink
+              src={emailSvg}
+              alt="email"
+              link="mailto:contact@anthonyingle.photo"
+            />
+            <ImageLink src={phoneSvg} alt="phone" link="tel:7273310866" />
+          </section>
+
+          <small className={styles.linebreak}>OR</small>
+
           <div>
             <label>Name</label>
             <br />
             <input
               name="name"
               type="text"
+              placeholder="Name"
               value={values.name}
               onChange={onChange}
             />
@@ -69,6 +97,7 @@ const About: NextPage = () => {
             <input
               name="email"
               type="email"
+              placeholder="Email"
               value={values.email}
               onChange={onChange}
             />
@@ -78,8 +107,10 @@ const About: NextPage = () => {
             <br />
             <textarea
               name="message"
+              placeholder="Message"
               value={values.message}
               onChange={onChange}
+              rows={4}
             />
           </div>
           <input className={styles.button} type="submit" value="Send" />

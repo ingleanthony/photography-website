@@ -9,6 +9,18 @@
   font-weight: 200;
 }
 
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.links img {
+  max-height: 1.5rem;
+}
+
 .container ul {
   margin: 2rem auto;
   list-style-type: none;
