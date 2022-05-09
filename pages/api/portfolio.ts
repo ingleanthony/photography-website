@@ -42,7 +42,6 @@ export default function handler(
       },
       function (error: Error, result: Data[]) {
         if (error) console.log(error);
-        console.log(result);
         res.status(200).json(result.reverse());
         return resolve();
       }
