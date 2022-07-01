@@ -1,3 +1,42 @@
 /* .imageContainer {
   cursor: pointer;
 } */
+
+.whiteButton {
+  z-index: 1;
+  width: 4em;
+  height: 4em;
+  text-align: center;
+  background-color: #ffffff;
+  color: rgb(36, 36, 36);
+  font-size: 12pt;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.125s ease-in-out;
+  opacity: 0.9;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.whiteButton:disabled {
+  cursor: unset;
+}
+
+.refreshButton {
+  position: absolute;
+  top: 2em;
+  right: 2em;
+}
+
+.backToTopButton {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+}
+
+.backToTopButton:hover,
+.refreshButton:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}

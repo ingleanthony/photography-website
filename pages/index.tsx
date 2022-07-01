@@ -2,15 +2,17 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import { SRLWrapper } from "simple-react-lightbox";
+// import { SRLWrapper } from "simple-react-lightbox";
 import useFetch from "../hooks/useFetch";
 import Masonry from "react-masonry-css";
 import Script from "next/script";
 import { Navbar } from "../components/Navbar";
 import Footer from "../components/Footer";
+// import { useCallback, useRef, useState } from "react";
 
 const Home: NextPage = () => {
   const { loading, error, data } = useFetch({ url: "/api/portfolio" });
+  // const [backToTopButton, setBackToTopButton] = useState(false); // state of back to top button
 
   return (
     <div className="container">
@@ -52,6 +54,15 @@ const Home: NextPage = () => {
 
       <Navbar />
 
+      {/* <button
+        className={`${styles.whiteButton} ${styles.backToTopButton}`}
+        style={{ opacity: backToTopButton ? 1 : 0 }}
+        onClick={() => scroll.scrollTo(0)}
+        disabled={!backToTopButton}
+      >
+        ↑
+      </button> */}
+
       {/* <SRLWrapper
         options={{
           caption: { showCaption: false },
@@ -76,7 +87,7 @@ const Home: NextPage = () => {
                 objectFit="cover"
                 alt={`photo${index}`}
                 quality={75}
-                srl_gallery_image="true"
+                // srl_gallery_image="true"
               />
             </div>
           );

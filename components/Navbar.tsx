@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { FC, useState } from "react";
+import React, { FC, MutableRefObject, useState } from "react";
 import logo from "../svg/logo.svg";
 import Link from "next/link";
 import Hamburger from "./Hamburger";
@@ -9,14 +9,16 @@ export const Navbar: FC = () => {
   return (
     <header className="navbar">
       <div className="mobile-logo">
-        <Link href="/" passHref>
-          <Image src={logo} alt="logo" height={35} />
+        <Link href="/">
+          <a>
+            <Image src={logo} alt="logo" height={35} />
+          </a>
         </Link>
       </div>
       <nav>
         <ul>
           <li>
-            <Link href={"/"}>Portfolio</Link>
+            <Link href={"/"}>Gallery</Link>
           </li>
           <li>
             <Link href={"/about"}>About</Link>
